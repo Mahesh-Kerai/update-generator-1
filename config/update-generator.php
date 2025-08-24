@@ -35,24 +35,16 @@ return [
     |--------------------------------------------------------------------------
     |
     | These paths will be excluded when generating new installation packages
+    | Note: .env file is included for fresh installations as it's required
     |
     */
     'exclude_new' => [
-        'storage',
-        'vendor',
-        '.env',
         'node_modules',
         '.git',
         '.idea',
-        'composer.lock',
-        'package-lock.json',
         'yarn.lock',
-        'public/storage',
-        'public/uploads',
-        'tests',
         'phpunit.xml',
         '.gitignore',
-        '.env.example',
         'README.md',
         'CHANGELOG.md',
     ],

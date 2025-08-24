@@ -100,7 +100,8 @@ final class UpdateGeneratorService
         $this->validateVersion($version);
 
         $outputDir = $this->getOutputDirectory();
-        $newPath = $outputDir . '/new_installation_temp';
+        // Use system temp directory to avoid infinite loops
+        $newPath = sys_get_temp_dir() . '/laravel_installation_' . uniqid();
         $finalZipPath = $outputDir . "/New_Installation_V{$version}.zip";
 
         try {
